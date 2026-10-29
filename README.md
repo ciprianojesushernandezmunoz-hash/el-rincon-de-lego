@@ -17,7 +17,7 @@ Font Awesome (para la parte los iconos)
 ## Agradecimientos
 
 Gracias a PLD Space por servir de inspiración para el diseño de la página.
-El diseño toma la siguiente página como referencia::
+El diseño toma la siguiente página como referencia:
 
 https://www.pldspace.com/
 
