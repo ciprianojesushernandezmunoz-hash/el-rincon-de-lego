@@ -1,0 +1,348 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+    background-color: black;
+    color: white;
+    border-bottom: 4px solid yellow;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 50px 8%;
+    background-color: navy;
+    color: white;
+    border-bottom: 4px solid black;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: 42px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.main-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 20px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-button:hover {
+    background-color: white;
+}
+
+section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Featured images */
+
+.featured-card {
+    position: relative;
+    flex: 0 0 calc((100% - 40px) / 3);
+    height: 350px;
+    overflow: hidden;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.featured-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.featured-card:hover img {
+    transform: scale(1.05);
+}
+
+.featured-card h3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+/* LEGO gallery */
+
+.burrito-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.burrito-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 1px solid black;
+    transition: transform 0.2s;
+}
+
+.burrito-card:hover img {
+    transform: scale(1.03);
+}
+
+.burrito-card h3 {
+    margin: 12px 10px 4px;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.burrito-card p {
+    margin: 0 10px 14px;
+    font-size: 14px;
+}
+
+/* Categories */
+
+.info-section {
+    padding: 25px;
+    background-color: white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.info-card {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.info-card i {
+    display: block;
+    margin-bottom: 12px;
+    color: navy;
+    font-size: 28px;
+}
+
+.info-card h3 {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* News */
+
+.news-card {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-left: 8px solid yellow;
+}
+
+.news-card h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* About */
+
+.about-section {
+    padding: 25px;
+    background-color: white;
+    border-top: 2px solid black;
+}
+
+.about-section p {
+    max-width: 750px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 5%;
+    background-color: black;
+    color: white;
+    border-top: 4px solid yellow;
+}
+
+footer a {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featured-card,
+    .burrito-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    footer {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+    header {
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 35px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    section {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .featured-card,
+    .burrito-card {
+        flex-basis: 100%;
+    }
+
+    .featured-card {
+        height: 280px;
+    }
+
+    .burrito-card img {
+        height: 250px;
+    }
+
+    .info-section,
+    .about-section {
+        padding: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
